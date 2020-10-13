@@ -3,10 +3,6 @@ package testdb;
 import java.sql.*;
 import java.util.Calendar;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args ) throws SQLException, ClassNotFoundException {
@@ -33,8 +29,8 @@ public class App
         Statement stmt=con.createStatement();
         String sql = "insert into invoices"
                    + "(date,description,value,paid)"
-                    + "values (date,description,value,paid)";
-        stmt.executeQuery(sql);
+                    + "values ('2020-10-12','bestellung 6','42','0')";
+        stmt.executeUpdate(sql);
     }
     public static void updateInvoice(int id, Date date, String description, double value, int paid)
     {
